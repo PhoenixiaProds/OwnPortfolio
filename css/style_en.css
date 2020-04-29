@@ -1,0 +1,1887 @@
+/*****************************************************************
+******        GENERIC CSS STYLESHEET FOR THIS WEBSITE       ******
+******                                                      ******
+******   Name : style_en.css    ***       Version : 1.0.0   ******
+******                                                      ******
+******                   Table of Content                   ******
+******                   ----------------                   ******
+******  - Reset                                             ******
+******  - Typography                                        ******
+******  - Base grid                                         ******
+******  - Left side                                         ******
+******  - Content area                                      ******
+******  - Introduction screen                               ******
+******  - About screen                                      ******
+******  - Skills screen                                     ******
+******  - Progressbar                                       ******
+******  - Pie Chart                                         ******
+******  - Experience & Education screen                     ******
+******  - Contact screen                                    ******
+******  - Last screen                                       ******
+******  - Articles listing                                  ******
+******  - Articles details                                  ******
+******  - 404 page                                          ******
+******  - Media iPad                                        ******
+******  - Page scrolling                                    ******
+******  - Carousel                                          ******
+******  - Portfolio style                                   ******
+******  - Portfolio grid                                    ******
+******  - Portfolio slideshow                               ******
+******  - Portfolio navigation                              ******
+*****************************************************************/
+
+/* Import patches for browsers */
+@import url('normalize.css');
+
+/*****************************************************************
+******             RESET : STANDARD MODIFYING               ******
+*****************************************************************/
+
+/* Setting font, background and hidding standard scrollbar */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #545454;
+    line-height: 22px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+/* Granting scroll for blog part */
+body.blog {
+    overflow-y: scroll;
+    overflow-x: auto;   
+}
+/* Changing links default style */
+a {
+    color: #545454;
+    text-decoration: none;
+    transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+a:hover {
+    color: #000;
+}
+::selection {
+    color: #000;
+    background: none repeat scroll 0 0 #0085fc;
+}
+::-moz-selection {
+    color: #000;
+    background: none repeat scroll 0 0 #0085fc;
+}
+*{
+    outline: 0!important;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+}
+figure, .slideshow li, .grid-gallery {
+    outline: 0!important;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition-timing-function: none;
+    -moz-transition-timing-function: none;
+    -webkit-transition-timing-function: none;
+    -o-transition-timing-function: none;
+    transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    -o-transition-duration: 0s;
+}
+img {
+    -webkit-backface-visibility: hidden;
+    max-width: 100%;
+    height: auto;
+}
+.flot-left {
+    float: left
+}
+.flot-right {
+    float: right
+}
+/* Changing forms default style */
+input[type="text"], textarea {
+    padding: 15px;
+    border: none;
+    border: 1px solid #dfdfdf;
+    color: #a6a6a6;
+    resize: none;
+    width: 95.2%;
+    font-size: 14px;
+    margin: 20px 0 0;
+    -webkit-user-select: text;
+}
+input[type="submit"] {
+    border: 2px solid #0085fc;
+    background-color: transparent;
+    color: #a6a6a6;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    color: #000;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    background-color: #FFF;
+    margin: 20px 0 0;
+    transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    color: #545454;
+    border: 1px solid #0085fc;
+}
+input[type="submit"]:hover {
+    background-color: #0085fc;
+    color: #fff;
+}
+input[type="text"], input[type="email"], input[type="search"], input[type="password"], textarea, input[type="submit"], input[type="button"] {
+    box-shadow: none !important;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-user-select: text;
+}
+.validation {
+    border: 1px solid #dc0505 !important;
+}
+#successmsg {
+    margin-top: 10px;
+    color: #7e983c;
+}
+
+/*****************************************************************
+******          TYPOGRAPHY : SETTING NEW STANDARD           ******
+*****************************************************************/
+
+/* Setting fonts */
+h1, h2, h3, h4, h5 {
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    color: #000;
+    text-transform: uppercase;
+}
+h1 {
+    font-style: italic;
+    border-bottom: 1px solid rgba(126, 126, 126, 0.3);
+    padding: 35px 15px 15px 15px;
+    margin: 0px 20px 20px 20px;
+    position: relative;
+    font-size: 38px;
+}
+h2 {
+    font-size: 45px;
+    margin: 0;
+    line-height: 45px;
+}
+h2 span {
+    font-weight: 300
+}
+h3 {
+    font-size: 16px;
+    margin: 50px 0 10px;
+}
+h4 {
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 30px;
+    margin: 0;
+}
+h5 {
+    font-size: 18px;
+}
+/* Adding dividers under titles and sections */
+.title-divider {
+    width: 70px;
+    height: 5px;
+    background-color: #0085fc;
+    margin: 30px 0 50px 0
+}
+.full-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #545454;
+    margin: 50px 0 0 0;
+    clear: both;
+}
+/* Setting background variations */
+.gray-bg {
+    background:url(../images/background-light-left.png) left top;
+}
+.white-bg {
+    background:url(../images/background-light-right.png) left top;
+}
+/* Setting standard button style */
+.button {
+    border: 2px solid #0085fc;
+    background-color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #000;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    padding: 10px 15px;
+    display: inline-block;
+    letter-spacing: 1px;
+    transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+.button:hover {
+    border: 2px solid #0085fc;
+    background-color: #0085fc;
+    color: #fff;
+}
+
+/*****************************************************************
+******        BASE GRID : SETTING GRID DISTRIBUTION         ******
+*****************************************************************/
+
+/* Setting container and columns position type */
+.container-sub {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+    float: left;
+    position: relative;
+}
+/* Columns default sizes */
+.col-12 {
+    width: 100%
+}
+.col-11 {
+    width: 91.66666667%
+}
+.col-10 {
+    width: 83.33333333%
+}
+.col-9 {
+    width: 75%
+}
+.col-8 {
+    width: 66.66666667%
+}
+.col-7 {
+    width: 58.33333333%
+}
+.col-6 {
+    width: 50%
+}
+.col-5 {
+    width: 41.66666667%
+}
+.col-4 {
+    width: 33.33333333%
+}
+.col-3 {
+    width: 25%
+}
+.col-2 {
+    width: 16.66666667%
+}
+.col-1 {
+    width: 8.33333333%
+}
+/* Self clearing code for content */
+.container-sub:after {
+    content: "\0020";
+    display: table;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/* Use clearfix class on parent to clear nested columns, or wrap each row of columns in a <div class="row"> */
+.clearfix:before, .clearfix:after, .row:before, .row:after{
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.row:after, .clearfix:after{
+    clear: both;
+}
+.row, .clearfix{
+    zoom: 1;
+}
+/* You can also use a <br class="clear" /> to clear columns */
+.clear{
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+/* Margin default sizes */
+.margin-bottom50{
+    margin-bottom: 50px
+}
+.margin-bottom40{
+    margin-bottom: 40px
+}
+.margin-bottom30{
+    margin-bottom: 30px
+}
+.margin-bottom20{
+    margin-bottom: 20px
+}
+.margin-bottom10{
+    margin-bottom: 10px
+}
+.margin-top50{
+    margin-top: 50px
+}
+.margin-top40{
+    margin-top: 40px
+}
+.margin-top30{
+    margin-top: 30px
+}
+.margin-top20{
+    margin-top: 20px
+}
+.margin-top10{
+    margin-top: 10px
+}
+.no-border-bottom{
+    border-bottom: none !important;
+}
+.margin-right30 {
+    margin-right: 30px;
+}
+
+/*****************************************************************
+******           LEFT SIDE : SETTING STANDARDS              ******
+*****************************************************************/
+
+/* Setting logo position */
+.logo {
+    text-align: center;
+    margin: 30px 0 0;
+}
+.logo span {
+    display: none
+}
+.logo img {
+    width: auto;
+    height: auto;
+}
+/* Setting menu graphic elements and making it fixed on the screen to make it appear on all sections */
+.menu {
+    position: fixed;
+    z-index: 100;
+    color: #f8f8f8;
+    background:url(../images/menu_en.jpg) left top;
+    width: 200px;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+}
+/* Setting menu navigation elements */
+.menu nav {
+    position: absolute;
+    top: 220px;
+    left: 0px;
+    right: 0px;
+    bottom: 50px;
+    width: 200px !important;
+}
+.menu nav a {
+    display: block;
+    padding: 13px 0;
+    text-align: left;
+    outline: none;
+    margin: 0 30px;
+    border-bottom: 1px solid #333333;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #FFF;
+    text-transform: uppercase;
+    transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+.menu nav a span.active {
+    color: #0085fc;
+    font-weight: 400
+}
+.menu nav a:hover {
+    color: #0085fc;
+    text-decoration: none;
+}
+.menu nav a span:nth-child(2) {
+    display: block;
+    color: #fff;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    padding-top: 3px;
+}
+.menu-link {
+    display: none
+}
+/* Setting social elements */
+.social {
+    padding: 30px;
+    position: absolute;
+    top: 619px;
+}
+.social a {
+    font-size: 20px;
+    transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+.social a:hover {
+    color: #fff;
+}
+.social .facebook {
+    color: #5a7eca
+}
+.social .twitter {
+    color: #03acf1;
+    margin: 0 26px 0 30px
+}
+.social .google-plus {
+    color: #df4a32
+}
+.social .github {
+    color: #0085fc;
+}
+.social .linkedin {
+    color: #0085fc;
+}
+.social .twitter {
+    color: #0085fc;
+    margin: 0 26px 0 30px
+}
+/* Setting copyright location and style */
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    padding: 30px;
+    color: #747474;
+    line-height: 18px;
+    letter-spacing: 1px
+}
+
+/*****************************************************************
+******         CONTENT : SETTING STANDARD ELEMENTS          ******
+*****************************************************************/
+
+/* Allowing scrolling under sections */
+.content-scroller {
+    position: absolute;
+    left: 200px;
+    right: 0px;
+    overflow: hidden;
+    height: 100%;
+}
+.content-wrapper {
+    width: 7356px;
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+}
+.content:last-child {
+    width: 1720px;
+    background: url(../images/background-light-right-end.png);
+    background-color: #fff;
+}
+/* Setting content blocks standards */
+.content {
+    width: 804px;
+    overflow-y: scroll;
+    height: 100%;
+    float: left;
+    -webkit-transition: background 0.3s linear;
+    -moz-transition: background 0.3s linear;
+    -o-transition: background 0.3s linear;
+    -ms-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+}
+/* Creating element and leaving empty in case of need to change default element */
+.content-active {}
+.content:hover .jspVerticalBar, .menu nav:hover .jspVerticalBar {
+    opacity: 1;
+}
+.inner {
+    padding: 70px;
+}
+.inner p {
+    position: relative;
+    padding: 0;
+}
+#introduction .inner p:first-of-type {
+    font-size: 24px;
+    text-align: left;
+    line-height: 36px;
+    font-style: italic;
+    color: #75838D;
+    letter-spacing: 0px;
+}
+/* Back to top visual settings */
+a.totop-link {
+    bottom:5px;
+    background:url(../images/go-to-top-arrow.jpg) left top no-repeat;
+    cursor: pointer;
+    display: none;
+    width:34px;
+    height:34px;
+    position: fixed;
+    z-index: 5;
+    right: 5px;
+    text-indent:-9999px;
+
+}
+/* Codrops top bar settings */
+.codrops-top {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.codrops-top a {
+    position: fixed;
+    z-index: 10000;
+    padding: 4px 7px;
+    letter-spacing: 1px;
+    color: #aaa;
+    text-shadow: 0px 1px 1px #fff;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0px 0px 3px 3px;
+}
+.codrops-top a:nth-child(1) {
+    right: auto;
+    left: 210px;
+}
+.codrops-top a:nth-child(2) {
+    right: 10px;
+}
+
+/*****************************************************************
+******             RESET : STANDARD MODIFYING               ******
+*****************************************************************/
+
+/* Choosing home position type */
+.introduction {
+    position:relative;
+}
+/* Setting home images properties */
+.introduction img {
+    z-index: -1;
+    height: auto;
+    width: 100%;
+    float: left;
+}
+/* Setting carousel dimension */
+.introduction .owl-carousel {
+    height: 100%;
+}
+.introduction .owl-carousel .owl-wrapper-outer {
+    height: 100%;
+}
+.introduction .owl-carousel .owl-wrapper, .introduction .owl-carousel .owl-item {
+    height: 100%;
+}
+.introduction .item {
+    height: 100%;
+}
+/* Setting text visual elements */
+.introduction h2 {
+    border: none;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 50px;
+    padding-bottom: 0;
+    font-size: 45px;
+    margin-bottom: 35px
+}
+.introduction .inner {
+    margin: 47% 0 0 0;
+    position:absolute;
+    z-index:2;
+}
+.introduction span.title {
+    border-bottom: 1px solid #0085fc;
+    border-top: 1px solid #0085fc;
+    color: #0085fc;
+    padding: 15px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+/*****************************************************************
+******       ABOUT SCREEN : SETTING VISUAL ELEMENTS         ******
+*****************************************************************/
+
+/* Setting background of the section */
+.about {
+    background: url(../images/about.jpg) no-repeat 100% 0  #ffffff;
+    background-size: contain;
+}
+.about .inner {
+    width: 50%
+}
+/* Setting position of the background */
+.about img {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0
+}
+/* Setting block sizes and marges */
+.about-con {
+    width: 100%
+}
+.about-con ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+/* Setting border style */
+.about-con ul li {
+    border-bottom: 1px solid #545454;
+    padding: 12px 0;
+}
+.about-con ul li:first-child {
+    padding: 0 0 12px 0
+}
+/* Setting signature position */
+.about img.signature {
+    position: inherit;
+    top: auto;
+    margin: 20px 0 0 0;
+}
+
+/*****************************************************************
+******       SKILLS SCREEN : SETTING VISUAL ELEMENTS        ******
+*****************************************************************/
+
+/* Creating element and leaving empty in case of need to change default element */
+.skills {}
+/* Setting skills position */
+.skill-list ul {
+    margin: 0;
+    padding: 0
+}
+.skill-list ul li {
+    padding: 5px 0 0;
+    list-style: none
+}
+.skills-con h4 {
+    width: 65%;
+}
+/* Setting skills font and size */
+.skill-list ul li:before {
+    content: "\f00c";
+    color: #0085fc;
+    font-family: 'FontAwesome';
+    font-size: 15px;
+    margin: 0 5px 0 0
+}
+/* Setting skills chart style */
+.skills-con .col-6:hover .chart .percent {
+    font-size: 45px;
+    color: #000;
+    transition-duration: .1s;
+    -moz-transition-duration: .1s;
+    -webkit-transition-duration: .1s;
+    -o-transition-duration: .1s;
+}
+
+/*****************************************************************
+******       PROGRESS BAR : SETTING VISUAL ELEMENTS         ******
+*****************************************************************/
+
+/* Setting progress bar style and position */
+.progress {
+    background: #d4d4d4;
+    width: 86%;
+    float: right;
+    position: relative;
+    top: 10px;
+}
+.progress div {
+    background-color: #0085fc;
+    height: 6px;
+}
+.progressbar-main {
+    position: relative;
+    min-height: 35px
+}
+.progress-value span {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    position: absolute;
+    left: -93px;
+    color: #000;
+    top: -19px
+}
+.progress-value span:after {
+    content: "%";
+    font-weight: 100
+}
+.progress-bar-description {
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 0 90px;
+    font-size: 14px;
+}
+
+/*****************************************************************
+******         PIE CHART : SETTING VISUAL ELEMENTS          ******
+*****************************************************************/
+
+/* Setting pie chart position */
+.chart{
+    position: relative;
+    display: inline-block;
+    width: 154px;
+    height: 154px;
+    text-align: center;
+    border-radius: 50%;
+    background-color : rgba(255,255,255,0.5);
+}
+.chart canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* Setting pie chart values position and style */
+.percent{
+    display: inline-block;
+    line-height: 110px;
+    z-index: 2;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin: 21px 0 0 0;
+    color: #0085fc;
+}
+/* Adding pie chart % symbol to values */
+.percent:after{
+    content: '%';
+    margin-left: 0.1em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+}
+/* Setting margins to elements */
+.angular{
+    margin-top: 100px;
+}
+.angular .chart{
+    margin-top: 0;
+}
+.chart-text{
+    margin: 30px 0 0 0
+}
+.chart-text p{
+    margin: 10px 0 0 15px
+}
+.chart-text h4{
+    margin: 0 0 0 15px;
+}
+
+/*****************************************************************
+******   EXPERIENCE & EDUCTION SCREENS : SETTING ELEMENTS   ******
+*****************************************************************/
+
+/* Setting experiences icons' style */
+.experience-con .icon-block i,.education-con .icon-block i{
+    font-size: 60px;
+    color: #0085fc;
+    margin: 8px 0 0
+}
+/* Setting margins */
+.experience-con h5,.education-con h5{
+    margin: 5px 0 7px 0
+}
+.experience-con span,.education-con span{
+    font-size: 16px;
+    color: #000;
+}
+/* Setting visual style for uppercase text */
+.experience-con strong,.education-con strong{
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 0 5px 0
+}
+/* Setting experience details position */
+.experience-details,.education-details{
+    float: left;
+}
+.experience-details i,.education-details i{
+    transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+.experience-details:hover i,.education-details:hover i{
+    font-size: 73px;
+    color: #000;
+}
+.experience-details:hover .col-3,.education-details:hover .col-3{
+    width: 29%;
+    transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+
+/*****************************************************************
+****** CONTACT SCREEN : SETTING MISSING & SPECIAL ELEMENTS  ******
+*****************************************************************/
+
+/* Creating element and leaving empty in case of need to change default element */
+.contact-details {}
+/* Setting contact details text elements */
+.contact-details i {
+    font-size: 45px;
+    color: #0085fc
+}
+.contact-details strong {
+    display: inline-block;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000;
+}
+/* Setting social contact text margins */
+.contact-text {
+    display: block;
+    float: left;
+    margin: 18px 0 0;
+    width: 100%;
+}
+.contact-details h3 {
+    margin-top: 0
+}
+.contact-text:first-child {
+    margin: 0
+}
+/* Setting contact details text size */
+.contact-details .phone i {
+    font-size: 40px
+}
+.contact-details .email i {
+    font-size: 35px
+}
+.contact-text i {
+    transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+.contact-text:hover i {
+    color: #000;
+}
+/* Setting social contact block elements */
+.contact-social i {
+    color: #0085fc;
+}
+.contact-social a i {
+    font-size: 25px;
+    margin: 0 14px
+}
+.contact-social a:first-child i {
+    margin: 0 15px 0 0
+}
+.contact-social i {
+    transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+.contact-social i:hover {
+    color: #000;
+}
+/* Creating element and leaving empty in case of need to change default element */
+.contact-form {}
+/* Setting text size */
+.contact-form h3 {
+    font-size: 28px;
+}
+
+/*****************************************************************
+******   LAST SCREEN : SETTING MISSING & SPECIAL ELEMENTS   ******
+*****************************************************************/
+
+/* Setting specific background */
+.introduction-end {
+    background: url(../images/profile-big.jpg)no-repeat right top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    cursor: pointer;
+}
+/* Setting dimensions */
+.introduction-end-con {
+    float: right;
+    margin: 30% 0 0;
+    width: 30%;
+}
+/* Setting specific text style */
+.introduction-end-con h3 {
+    font-size: 55px;
+    color: #FFF;
+    line-height: 100px;
+}
+/* Setting specific normalised text style */
+.introduction-end-con h3 strong {
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    padding: 10px 0;
+    color: #0085fc;
+    font-weight: normal;
+}
+/* Setting specific uppercase text style */
+.introduction-end-con .rotate {
+    font-weight: 300;
+    color: #000;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    padding: 25px 0;
+}
+
+/*****************************************************************
+******                  ARTICLES LISTING                    ******
+*****************************************************************/
+
+/* Setting blog margins */
+.blog-main {
+    clear: both;
+    padding: 4% 0;
+    margin:0 70px 0 300px;
+}
+.blog-top {
+    width: 100%;
+    margin: 0 0 55px 0;
+}
+.blog-title {
+    width: 100%;
+}
+.breadcrumbs {
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin: 10px 0 40px;
+}
+/* Setting font style */
+.blog-top .breadcrumbs {
+    color: #9e9e9e;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+/* Setting blog title and text margins */
+.blog-details-title .breadcrumbs{
+    margin: 10px 0;
+}
+.blog-details-title .post-details {
+    margin: 10px 0 30px;
+}
+.breadcrumbs a {
+    color: #757575;
+}
+.blog-left {
+    width: 80%;
+    float: left;
+    margin:0 0% 0 0;
+}
+/* Setting left blog block size  and position */
+.blog-left .row .blog-list {
+    float: left;
+    margin: 0 2.7% 35px 0;
+    position: relative;
+    width: 30.5%;
+    min-height: 605px
+}
+.blog-left .row .blog-list:last-child {
+    margin: 0;
+}
+/* Setting image display type */
+.blog-list img {
+    display: block;
+}
+/* Setting hovering style */
+.blog-list:hover h3 a{
+    opacity: 0.5;
+}
+.blog-list iframe, embed, object{
+    min-height: 204px;
+}
+/* Setting video and embedded media size */
+video {
+    max-width: 100%;
+    height: auto;
+}
+iframe, embed, object {
+    max-width: 100%;
+    border: 0;
+}
+/* Setting another hovering size (Comments are a bit useless as all is written in class names) */
+.blog-list:hover .title-divider {
+    background-color: #000;
+}
+/* Setting othe rmargins and font sizes */
+.blog-list-details {
+    margin: 20px 0 0 0
+}
+.blog-list-details h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 25px
+}
+.blog-list-details h3 a {
+    color: #000;
+}
+/* Setting clock style */
+.date {
+    color: #909090;
+    display: block;
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+.post-details {
+    margin: 20px 0 0 0;
+    display: block;
+}
+.blog-list-details .title-divider {
+    margin: 25px 0;
+}
+.blog-list .contact-social a i {
+    font-size: 20px
+}
+.blog-right {
+    float: right;
+    margin: 0;
+    width: 16%;
+}
+.blog-right h3 {
+    margin: 0 0 20px 0;
+}
+/* Setting blocks display settings */
+.blog-right .search {
+    background: url("../images/icon-search.png") no-repeat scroll 95% center rgba(0, 0, 0, 0);
+    border: 1px solid #cdcdcd;
+    color: #838383;
+    font-size: 13px;
+    margin: 0;
+    border: 1px solid #666;
+    padding: 10px;
+    width: 90%;
+    font-family: "Roboto",sans-serif;
+}
+.sidebar-block {
+    margin: 0 0 60px 0;
+}
+.sidebar-block ul {
+    padding: 0;
+    margin: 0
+}
+/* Setting sidebar color and position */
+.sidebar-block ul li {
+    border-bottom: 1px solid #dfdfdf;
+    padding: 12px 0;
+    list-style: none
+}
+.sidebar-block ul li:first-child {
+    padding: 0 0 12px 0
+}
+.sidebar-block ul li:last-child {
+    border-bottom: none;
+    padding: 12px 0 0 0
+}
+.sidebar-block .date {
+    font-size: 13px
+}
+.calendar {
+    width: 100%
+}
+/* Setting calendar display style */
+.calendar td, .calendar th {
+    text-align: center;
+    font-weight: 400;
+}
+.calendar th {
+    font-weight: 600
+}
+.calendar a {
+    border-bottom: 2px solid #0085fc;
+    font-weight: 600
+}
+.tagcloud{
+    display: table
+}
+.tagcloud a {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 7px 7px 0 0;
+    padding: 2px 11px 3px;
+}
+.tagcloud a:hover {
+    background: #000;
+    border: 1px solid #000;
+    color: #FFF;
+}
+/* Setting pages display styles */
+.pagination {
+    border-top: 1px solid #dfdfdf;
+    float: left;
+    padding: 70px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.pagerblock {
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    margin: 0 0 0 8%;
+}
+.pagerblock li {
+    float: left;
+    margin: 0 12px;
+    list-style: none;
+}
+.pagerblock li a {
+    border: 2px solid #e5e5e5;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    height: 50px;
+    line-height: 52px;
+    width: 50px;
+}
+.pagerblock li a:hover, .pagerblock li a.current {
+    border: 2px solid #000;
+}
+.pagerblock li a i {
+    color: #000;
+    font-size: 22px;
+    line-height: 35px;
+}
+
+/*****************************************************************
+******                  ARTICLES DETAILS                    ******
+*****************************************************************/
+
+/* Setting title size */
+.blog-details-title h2 {
+    font-size: 25px;
+}
+/* Setting content size */
+.blog-content {
+    margin: 35px 0;
+    float: left
+}
+.content-left {
+    float: left;
+    width: 47%;
+    margin-right: 3%
+}
+.content-right {
+    float: left;
+    width: 47%;
+    margin-left: 3%
+}
+/* Setting bold size and strength */
+.blog-details strong {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px
+}
+/* Setting share sector */
+.blog-share {
+    border-bottom: 2px solid #000;
+    border-top: 1px solid #dfdfdf;
+    clear: both;
+    float: none;
+    margin-bottom: 60px;
+    padding: 40px 0;
+    text-align: center;
+}
+/* Setting comments sector */
+.comments-details {
+    border-bottom: 1px solid #dfdfdf;
+    clear: both;
+    float: left;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+.comments-sub{
+    padding-left: 110px;
+}
+.comments-name {
+    width: 25%;
+    float: left
+}
+.comments-text {
+    width: 75%;
+    float: left
+}
+.pull-left {
+    float: left;
+}
+.media-object {
+    border-radius: 100%;
+    height: 80px;
+    margin: 0 25px 0 0;
+    width: 80px;
+    display: block;
+}
+.comments-details .name {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.comments-details .date {
+    display: block;
+    font-size: 14px;
+    color: #9e9e9e;
+}
+/* Setting comment button properties */
+.small-button {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    padding: 5px 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.recent-comments {
+    width: 100%;
+    margin: 0 auto;
+}
+.recent-comments .col-3{
+    width: 31%;
+}
+.recent-comments label{
+    margin-bottom: 8px;
+    float: left;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.recent-comments .required {
+    color: #d51818;
+    float: left;
+    font-size: 25px;
+    margin-right: 6px;
+}
+.recent-comments input[type=text] {
+    float: left;
+    margin: 0 2% 0 0;
+    padding: 12px;
+}
+.recent-comments input.last {
+    margin: 0
+}
+.recent-comments textarea {
+    min-height: 120px;
+    padding: 15px;
+    margin: 0;
+    width: 96%;
+}
+.form-group{
+    float: left;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+/*****************************************************************
+******                      404 PAGE                        ******
+*****************************************************************/
+
+/* Setting margings and ratio for page */
+.no-page{
+    margin:0 0 0 300px;
+}
+.no-page-text{
+    margin: 2% 0 0 405px
+}
+
+/*****************************************************************
+******           MEDIA IPAD : FIXING RESOLUTION             ******
+*****************************************************************/
+
+/* Setting auto-adjustment for iPad resolution */
+@media only screen and (max-device-width:768px)   {
+    .introduction img {
+        height:auto;
+        width:auto;
+    }
+}
+
+/*****************************************************************
+******              PAGE SCROLLING : STYLING                ******
+*****************************************************************/
+
+/* Setting internal scrollbar position */
+.jspContainer {
+	overflow: hidden;
+	position: relative;
+}
+/* Setting internal scrollbar panes position */
+.jspPane {
+	position: absolute;
+}
+/* Setting internal scrollbar style */
+.jspVerticalBar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 5px;
+	height: 100%;
+	background: transparent;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear;
+	-moz-transition: opacity 0.2s linear;
+	-o-transition: opacity 0.2s linear;
+	-ms-transition: opacity 0.2s linear;
+	transition: opacity 0.2s linear;
+}
+.jspHorizontalBar {
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	width: 100%;
+	height: 7px;
+	background: transparent;
+	display:none;
+}
+.jspVerticalBar *, .jspHorizontalBar * {
+	margin: 0;
+	padding: 0;
+}
+.jspCap {
+	display: none;
+}
+.jspHorizontalBar .jspCap {
+	float: left;
+}
+/* Setting bar color when tracking */
+.jspTrack {
+	background: rgba(202, 202, 202, 0.2);
+	position: relative;
+}
+/* Setting bar color when dragging */
+.jspDrag {
+	background: rgba(0, 0, 0, 0.1);
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+/* Setting bar color when hovering */
+.jspDrag:hover {
+	background: rgba(0, 0, 0, 0.2);
+}
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag {
+	float: left;
+	height: 100%;
+}
+/* Setting arrow color on bar */
+.jspArrow {
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+.jspArrow.jspDisabled {
+	cursor: default;
+	background: #80808d;
+}
+.jspVerticalBar .jspArrow {
+	height: 16px;
+}
+.jspHorizontalBar .jspArrow {
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+.jspVerticalBar .jspArrow:focus {
+	outline: none;
+}
+/* Setting bar corners color, size and position */
+.jspCorner {
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+* html .jspCorner {
+	margin: 0 -3px 0 0;
+}
+/* Hidding scrollbar when not necessary */
+.noscroll{
+	overflow: hidden !important
+}
+
+/*****************************************************************
+******            CAROUSEL : DISPLAY SETTINGS               ******
+*****************************************************************/
+
+/* Clearfix display */
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* Hidding all until init */
+.owl-carousel {
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper {
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight {
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+.owl-carousel .owl-item {
+	float: left;
+}
+.owl-controls .owl-page, .owl-controls .owl-buttons div {
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* Setting mouse grab icon */
+.grabbing {
+	cursor: url(../images/grabbing.png) 8 8, move;
+}
+/* Fixing display and size */
+.owl-carousel .owl-wrapper, .owl-carousel .owl-item {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+}
+.owl-item iframe {
+    width: 100%;
+}
+/* Setting controls position */
+.owl-theme .owl-controls {
+	margin-top: 10px;
+	text-align: center;
+}
+.introduction .owl-pagination {
+    bottom:5% !important;
+}
+.owl-pagination {
+	bottom: 12% !important;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+}
+.blog-details .owl-pagination{
+    bottom: 6% !important;
+}
+.owl-buttons {
+	display: none;
+}
+/* Setting control buttons style */
+.owl-theme .owl-controls .owl-buttons div {
+	color: #FFF;
+	display: inline-block;
+	zoom: 1;
+    *display: inline;
+	margin: 5px;
+	padding: 3px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background: #869791;
+	filter: Alpha(Opacity=50);
+	opacity: 0.5;
+}
+/* Fixing hovering on touch devices */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover {
+	filter: Alpha(Opacity=100);
+	opacity: 1;
+	text-decoration: none;
+}
+/* Setting carousel pagination display */
+.owl-theme .owl-controls .owl-page {
+	display: inline-block;
+	zoom: 1;
+    *display: inline;
+}
+/* Setting carousel style display */
+.owl-theme .owl-controls .owl-page span {
+	border: 2px solid #fff;
+	border-radius: 100%;
+	display: block;
+	height: 10px;
+	margin: 5px 7px;
+	width: 10px;
+}
+/* Setting universal background for carousel */
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
+	background-color: #fff;
+}
+/* Setting page numbering style if pagination is true */
+.owl-theme .owl-controls .owl-page span.owl-numbers {
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+/* Displaying preloader while loading carousel images */
+.owl-item.loading {
+	min-height: 150px;
+	background: url(../css/AjaxLoader.gif) no-repeat center center
+}
+
+/*****************************************************************
+******          PORTFOLIO STYLE : SETTING STANDARDS         ******
+*****************************************************************/
+
+/* Setting portfolio gallery size and position */
+.grid-gallery { 
+    height:2600px;
+}
+.grid-gallery ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.grid-gallery figure {
+	margin: 0;
+}
+.grid-gallery figure img {
+	display: block;
+	width: 100%;
+}
+/* Setting portfolio gallery style and position */
+.grid-gallery figcaption h3 {
+	margin: 0;
+	font-weight: 500;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+	text-transform: uppercase;
+	padding: 0 0 10px 0;
+}
+.grid-gallery figcaption span {
+	border-bottom: 3px solid #0085fc;
+	color: #000;
+	display: block;
+	font-size: 12px;
+	margin: 0 0 25px;
+	padding: 0 0 15px;
+	text-transform: uppercase;
+}
+
+/*****************************************************************
+******       PORTFOLIO STYLE : SETTING GRID STANDARDS       ******
+*****************************************************************/
+
+/* Creating element and leaving empty in case of need to change default element */
+.grid-wrap {}
+/* Setting default margins */
+.grid {
+	margin: 0 auto;
+}
+/* Setting default position with selector */
+.grid li {
+	width: 100%;
+	float: left;
+	cursor: pointer;
+	margin: 0 0 70px 0;
+	position: relative !important;
+	top: inherit !important;
+}
+.grid figure {
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+.grid li:hover figure {
+	opacity: 1;
+}
+/* Setting appaerance of clickable space of the grid */
+.grid figcaption {
+	background-color: #0085fc;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-webkit-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-duration: .2s;
+	-moz-transition-duration: .2s;
+	-webkit-transition-duration: .2s;
+	-o-transition-duration: .2s;
+}
+/* Reveal the previous bloc style on hover */
+.grid li:hover figcaption {
+	opacity: 1;
+	transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-webkit-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-duration: .2s;
+	-moz-transition-duration: .2s;
+	-webkit-transition-duration: .2s;
+	-o-transition-duration: .2s;
+}
+/* Setting details access image position*/
+.figcaption-details {
+	position: absolute;
+	top: 32%;
+	width: 100%;
+	text-align: center;
+}
+/* Setting size and display of the details access image */
+.figcaption-details img {
+	width: 82px !important;
+	height: 82px !important;
+	display: inline !important;
+	margin: 0 0 30px
+}
+
+/*****************************************************************
+******     PORTFOLIO STYLE : SETTING SLIDESHOW STANDARDS    ******
+*****************************************************************/
+
+/* Setting size and position with hidding details content to make it appear with java */
+.slideshow {
+	position: fixed;
+	background: rgba(0,133,252,0.1);
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.4) 0%, rgba(0,133,252,0.85) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.4)), color-stop(100%, rgba(0,133,252,0.85)));
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.4) 0%, rgba(0,133,252,0.85) 100%);
+	background: -o-linear-gradient(left, rgba(0,0,0,0.4) 0%, rgba(0,133,252,0.85) 100%);
+	background: -ms-linear-gradient(left, rgba(0,0,0,0.4) 0%, rgba(0,133,252,0.85) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,133,252,0.85) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc00', endColorstr='#e50076', GradientType=1 );
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+/* Making visible the block on click with java */
+.slideshow-open .slideshow {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+.slideshow ul {
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translate3d(0, 0, 150px);
+	transform: translate3d(0, 0, 150px);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+.slideshow ul.animatable li {
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+.slideshow-open .slideshow ul {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+/* Setting position and size of block display while hidden */
+.slideshow li {
+        width: 700px;
+        height: 630px;
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        margin: -280px 0 0 -400px;
+        visibility: hidden;
+}
+/* Showing hidden article */
+.slideshow li.show {
+	visibility: visible;
+}
+/* Setting display style of block under different states */
+.slideshow li:after {
+	content: '';
+	position: absolute;
+	width: 116%;
+	height: 116%;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,0.8);
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+.slideshow li.current:after {
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+	transition: opacity 0.3s, visibility 0s 0.3s;
+}
+.slideshow figure {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	border: 50px solid #fff;
+	overflow: hidden;
+}
+.slideshow figcaption {
+	padding-bottom: 20px;
+}
+.slideshow figcaption h3 {
+	font-weight: 300;
+	font-size: 200%;
+}
+
+/*****************************************************************
+******       PORTFOLIO STYLE : SETTING NAV STANDARDS        ******
+*****************************************************************/
+
+/* Setting details display properties */
+.slideshow nav span {
+	position: fixed;
+	z-index: 1000;
+	color: #000;
+	text-align: center;
+	padding: 3%;
+	cursor: pointer;
+	font-size: 2.2em;
+}
+/* Setting slideshow hovering color */
+.slideshow nav span:hover {
+	color: #FFF
+}
+/* Setting nav effect */
+.slideshow nav span.nav-prev, .slideshow nav span.nav-next {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+/* Setting block closing visual */
+.slideshow nav span.nav-close {
+	top: 0;
+	right: 0;
+	padding: 0.5em 0.7em;
+	color: #0085fc;
+	background-color: #000;
+}
+/* Setting block closing visual on hover */
+.slideshow nav span.nav-close:hover {
+	background-color: #FFF;
+	color: #000
+}
+/* Setting font style of block */
+.icon:before, .icon:after {
+	font-family: 'FontAwesome';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/* Setting previous navigation button position */
+span.nav-prev {
+	left: 50%;
+    margin-left: -537px;
+}
+/* Setting previous navigation button icon */
+span.nav-prev:before {
+	content: "\f053";
+}
+/* Setting next navigation button position */
+span.nav-next {
+	right: 50%;
+    margin-right: -537px;
+}
+/* Setting next navigation button icon */
+span.nav-next:before {
+	content: "\f054";
+}
+/* Setting close navigation button icon */
+span.nav-close:before {
+	content: "\f00d";
+}

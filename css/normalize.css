@@ -1,0 +1,281 @@
+/*****************************************************************
+******   CORRECT HMTL5 DISPLAY UNDER IE 6, 7, 8, 9 et FF3   ******
+******                                                      ******
+******   Name : normalize.css   ***       Version : 1.0.0   ******
+******                                                      ******
+******                   Table of Content                   ******
+******                   ----------------                   ******
+******  - Base patching                                     ******
+******  - Links patching                                    ******
+******  - Typography patching                               ******
+******  - List patching                                     ******
+******  - Embedded patching                                 ******
+******  - Figures patching                                  ******
+******  - Forms patching                                    ******
+******  - Table patching                                    ******
+*****************************************************************/
+
+/* Correct block display not defined */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary {
+    display: block;
+}
+/* Correct inline-block display not defined */
+audio,canvas,video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+/* Prevents modern browsers from displaying audio without control and excess height for iOS devices */
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+/* Style hidden addresses, not working for IE 6 */
+[hidden] {
+    display: none;
+}
+
+/*****************************************************************
+******       CORRECT BASE UNDER IE 6, 7, 8, 9 et FF3        ******
+*****************************************************************/
+
+/* Coorects text resizing in em units and iOS text size */
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* Addresses font-family between text areas and form elements */
+html,button,input,select,textarea {
+    font-family: "Roboto",sans-serif;
+}
+/* Addresses margins under IE 6, 7 */
+body {
+    margin: 0;
+}
+
+/*****************************************************************
+******       CORRECT LINKS UNDER IE 6, 7, 8, 9 et FF3       ******
+*****************************************************************/
+
+/* Addresses outline displayed under Chrome */
+a:focus {
+    outline: thin dotted;
+}
+/* Improves readability for focus and hovered elements under all browsers */
+a:hover,a:active {
+    outline: 0;
+}
+
+/*****************************************************************
+******    CORRECT TYPOGRAPHY UNDER IE 6, 7, 8, 9 et FF3     ******
+*****************************************************************/
+
+/* Addresses font sizes and margins for IE, FF4, Chrome */
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0;
+}
+/* Addresses styling for IE, S5, Chrome */
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+dfn {
+    font-style: italic;
+}
+mark {
+    background: #ff0;
+    color: #000;
+}
+/* Addresses styling to bold for FF3, S4/5, Chrome */
+b,strong {
+    font-weight: bold;
+}
+blockquote {
+    margin: 1em 40px;
+}
+/* Addresses margins for IE */
+p,pre {
+    margin: 1em 0;
+}
+/* Corrects font-family for IE, S5, Chrome */
+pre,code,kbd,samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+/* Improves readability of pre-formatted text in all browsers */
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+/* Addresses CSS quotes properties in IE, S4 */
+q {
+    quotes: none;
+}
+q:before,q:after {
+    content: '';
+    content: none;
+}
+small {
+    font-size: 75%;
+}
+/* Prevents sub and sup affecting line-height in all browsers */
+sub,sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+/*****************************************************************
+******   CORRECT LISTS DISPLAY UNDER IE 6, 7, 8, 9 et FF3   ******
+*****************************************************************/
+
+/* Addresses margins set differently in IE */
+dl,menu,ol,ul {
+    margin: 1em 0;
+}
+dd {
+    margin: 0 0 0 40px;
+}
+/* Addresses paddings set differently in IE */
+menu,ol,ul {
+    padding: 0 0 0 40px;
+}
+/* Corrects list images handled incorrectly in IE7 */
+nav ul,nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+/*****************************************************************
+******  CORRECT EMBEDDED CONTENT UNDER IE 6, 7, 8, 9 et FF3 ******
+*****************************************************************/
+
+/* Improves image quality and removes border when inside a element in IE, FF3 */
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+/* Corrects overflow display in IE */
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/*****************************************************************
+******      CORRECT FIGURES UNDER IE 6, 7, 8, 9 et FF3      ******
+*****************************************************************/
+
+/* Addresses margin not present in IE, S5, O11 */
+figure {
+    margin: 0;
+}
+
+/*****************************************************************
+******       CORRECT FORMS UNDER IE 6, 7, 8, 9 et FF3       ******
+*****************************************************************/
+
+/* Corrects margin displayed under IE */
+form {
+    margin: 0;
+}
+/* Define consistent border, margin, and padding */
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+/* Corrects color not being inherited, alignment displayed and text wrapping under IE, FF3 */
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+    *margin-left: -7px;
+}
+/* Corrects font size not being inherited in all browsers, addresses margins and consistency */
+button,input,select,textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+/* Addresses FF setting line-height on 'input' using !important in the UA stylesheet */
+button,input {
+    line-height: normal;
+}
+/* Improves usability and consistency of cursor style and clickable elements */
+button,input[type="button"],input[type="reset"],input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible;
+}
+/* Re-set default cursor for disabled elements */
+button[disabled],input[disabled] {
+    cursor: default;
+}
+/* Addresses box sizing set to content-box in IE ans removes excess padding */
+input[type="checkbox"],input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    *height: 13px;
+    *width: 13px;
+}
+/* Addresses appearance and box-sizing set to searchfield in S5, Chrome */
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+/* Removes inner padding and search cancel button in S5, Chrome on OS X */
+input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+/* Removes inner padding and border in FF3+ */
+button::-moz-focus-inner,input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+/* Removes default vertical scrollbar in IE and improves readability and alignment in all browsers */
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+/*****************************************************************
+******      CORRECT TABLES UNDER IE 6, 7, 8, 9 et FF3       ******
+*****************************************************************/
+
+/* Remove most spacing between cells */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
