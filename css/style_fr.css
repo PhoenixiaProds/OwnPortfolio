@@ -652,8 +652,8 @@ a.totop-link {
 
 /* Setting background of the section */
 .about {
-    background: url(../images/about.jpg) no-repeat 100% 0  #474645;
-    background-size: contain;
+    background: url(../images/about-fr.png) no-repeat 100% 0  #474645;
+    background-size: cover;
 }
 .about .inner {
     width: 50%
