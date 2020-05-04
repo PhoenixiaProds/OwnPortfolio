@@ -5,11 +5,11 @@ Repository for code checking of my case studies Portfolio
 
 ## What is missing?
 
-- **Blog part is missing**
+**Blog part is missing**
 - First wanted to include blog part with IT and dev articles.
 - Only css written about this part. No html file associated for now.
 
-- **Contact form is disabled**
+**Contact form is disabled**
 - Also disabled contact form part to avoid spamming when website live.
 - Deleted php file, just in case ;)
 
