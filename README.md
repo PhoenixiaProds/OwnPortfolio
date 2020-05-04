@@ -15,6 +15,6 @@ Repository for code checking of my case studies Portfolio
 
 ## What is next?
 As this repo was made for a study project, I'm not granting any kind of updates or deadline on it if some are on the run.
-Please just stay live to be aware of updates.
+Please stay live to be aware of updates.
 
 ## Credits
