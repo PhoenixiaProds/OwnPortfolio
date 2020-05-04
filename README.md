@@ -1,4 +1,4 @@
-# OwnPortfolio
+# Corentin KOUVTANOVITCH - Phoenixia Production - Personal Portfolio
 Repository for code checking of my case studies Portfolio
 
 [![alt text](https://ckouvtanovitch.phoenixia-prods.com/images/PORTFOLIO-colored.jpg "Portfolio Corentin KOUVTANOVITCH")](https://ckouvtanovitch.phoenixia-prods.com)
