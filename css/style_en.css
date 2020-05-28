@@ -403,7 +403,7 @@ h5 {
 /* Setting menu navigation elements */
 .menu nav {
     position: absolute;
-    top: 220px;
+    top: 240px;
     left: 0px;
     right: 0px;
     bottom: 50px;
@@ -448,8 +448,8 @@ h5 {
 /* Setting social elements */
 .social {
     padding: 30px;
-    position: absolute;
-    top: 619px;
+    position: relative;
+    top: 350px;
 }
 .social a {
     font-size: 20px;
@@ -763,7 +763,7 @@ a.totop-link {
 *****************************************************************/
 
 /* Setting pie chart position */
-.chart{
+.chart {
     position: relative;
     display: inline-block;
     width: 154px;
@@ -772,13 +772,13 @@ a.totop-link {
     border-radius: 50%;
     background-color : rgba(255,255,255,0.5);
 }
-.chart canvas{
+.chart canvas {
     position: absolute;
     top: 0;
     left: 0;
 }
 /* Setting pie chart values position and style */
-.percent{
+.percent {
     display: inline-block;
     line-height: 110px;
     z-index: 2;
@@ -790,26 +790,26 @@ a.totop-link {
     color: #0085fc;
 }
 /* Adding pie chart % symbol to values */
-.percent:after{
+.percent:after {
     content: '%';
     margin-left: 0.1em;
     font-family: 'Oswald', sans-serif;
     font-weight: 100;
 }
 /* Setting margins to elements */
-.angular{
+.angular {
     margin-top: 100px;
 }
-.angular .chart{
+.angular .chart {
     margin-top: 0;
 }
-.chart-text{
+.chart-text {
     margin: 30px 0 0 0
 }
 .chart-text p{
     margin: 10px 0 0 15px
 }
-.chart-text h4{
+.chart-text h4 {
     margin: 0 0 0 15px;
 }
 
@@ -818,21 +818,21 @@ a.totop-link {
 *****************************************************************/
 
 /* Setting experiences icons' style */
-.experience-con .icon-block i,.education-con .icon-block i{
+.experience-con .icon-block i,.education-con .icon-block i {
     font-size: 60px;
     color: #0085fc;
     margin: 8px 0 0
 }
 /* Setting margins */
-.experience-con h5,.education-con h5{
+.experience-con h5,.education-con h5 {
     margin: 5px 0 7px 0
 }
-.experience-con span,.education-con span{
+.experience-con span,.education-con span {
     font-size: 16px;
     color: #000;
 }
 /* Setting visual style for uppercase text */
-.experience-con strong,.education-con strong{
+.experience-con strong,.education-con strong {
     font-weight: 500;
     color: #000;
     text-transform: uppercase;
@@ -840,20 +840,20 @@ a.totop-link {
     margin: 0 0 5px 0
 }
 /* Setting experience details position */
-.experience-details,.education-details{
+.experience-details,.education-details {
     float: left;
 }
-.experience-details i,.education-details i{
+.experience-details i,.education-details i {
     transition-duration: .2s;
     -moz-transition-duration: .2s;
     -webkit-transition-duration: .2s;
     -o-transition-duration: .2s;
 }
-.experience-details:hover i,.education-details:hover i{
+.experience-details:hover i,.education-details:hover i {
     font-size: 73px;
     color: #000;
 }
-.experience-details:hover .col-3,.education-details:hover .col-3{
+.experience-details:hover .col-3,.education-details:hover .col-3 {
     width: 29%;
     transition-duration: .2s;
     -moz-transition-duration: .2s;
@@ -945,7 +945,7 @@ a.totop-link {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 /* Setting dimensions */
 .introduction-end-con {

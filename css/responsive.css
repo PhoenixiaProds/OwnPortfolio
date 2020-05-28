@@ -79,12 +79,6 @@
     .jspVerticalBar {
         opacity: 1;
     }
-    .menu nav {
-        top: 180px;
-    }
-    .social {
-        top: 535px;
-    }
     .copyright {
         padding: 20px 30px;
     }
@@ -167,6 +161,14 @@
     }
 }
 
+@media screen and (max-height: 960px) {
+    .quote-text-dark {
+        font-size: 20px;
+    }
+    .quote-text-light {
+        font-size: 20px;
+    } 
+}
 /*****************************************************************
 ******                  RESOLUTION 900PX                    ******
 *****************************************************************/
@@ -213,6 +215,12 @@
         font-size: 120px;
         letter-spacing: 1px;
         margin: 14px auto 10px auto;
+    }
+}
+/* Changing homepage title margin */
+@media only screen and (max-height: 880px) {
+    .title-time {
+        margin: 65px auto 0px auto;
     }
 }
 
@@ -273,6 +281,16 @@
         visibility: visible;
     }
 }
+/* Changing homepage title margin and hidding text slider*/
+@media only screen and (max-height: 800px) {
+    .title-time {
+        margin: 50px auto 0px auto;
+    }
+    .flexslider-quotes {
+        display: none;
+    }
+}
+
 
 /*****************************************************************
 ******                  RESOLUTION 768PX                    ******
@@ -482,6 +500,12 @@
     }
     .xs-display-none {
         display: none
+    }
+}
+
+@media screen and (max-height: 768px) {
+    .copyright{
+        visibility:hidden;
     }
 }
 
